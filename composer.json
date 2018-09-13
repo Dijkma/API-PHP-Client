@@ -1,5 +1,5 @@
 {
-    "name": "bart09/seoshop-php",
+    "name": "seoshop/seoshop-php",
     "description": "PHP client for the Lightspeed eCom API",
     "keywords": ["api", "client", "php", "ecom", "lightspeed"],
     "homepage": "http://developers.lightspeedhq.com/ecom",
