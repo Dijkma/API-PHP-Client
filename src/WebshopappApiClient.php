@@ -799,7 +799,18 @@ class WebshopappApiClient
 
         if ($responseCode < 200 || $responseCode > 299 || ($responseBody && array_key_exists('error', $responseBody)))
         {
-            $this->handleResponseError($responseCode, $responseBody);
+            //$this->handleResponseError($responseCode, $responseBody);
+			var_dump($responseCode);
+			var_dump($responseBody);
+			print('Error, Trying again in 10 secs...' . PHP_EOL);
+			sleep(10);
+			if ($retry >= 5) {
+				print('More than 5 retries, throwing expection...');
+				$this->handleResponseError($responseCode, $responseBody);
+			}
+			
+			print('Retry: ' . ($retry+1) . PHP_EOL);
+			return $this->sendRequest($url, $method, $payload, $retry+1);
         }
 
         if ($responseBody && preg_match('/^checkout/i', $url) !== 1)
