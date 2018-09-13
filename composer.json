@@ -7,7 +7,7 @@
     "repositories": [  
         {  
             "type": "vcs",  
-            "url": "https://github.com/bart09/API-PHP-Client.git"
+            "url": "https://github.com/bart09/API-PHP-Client"
         }  
     ], 
     "authors": [
