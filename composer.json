@@ -1,9 +1,15 @@
 {
-    "name": "seoshop/seoshop-php",
+    "name": "bart09/seoshop-php",
     "description": "PHP client for the Lightspeed eCom API",
     "keywords": ["api", "client", "php", "ecom", "lightspeed"],
     "homepage": "http://developers.lightspeedhq.com/ecom",
     "license": "MIT",
+    "repositories": [  
+        {  
+            "type": "vcs",  
+            "url": "https://github.com/bart09/API-PHP-Client"
+        }  
+    ], 
     "authors": [
         {
             "name": "Lightspeed and contributors",
