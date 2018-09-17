@@ -739,7 +739,7 @@ class WebshopappApiClient
      * @return mixed The decoded response object
      * @throws WebshopappApiException
      */
-    private function sendRequest($url, $method, $payload = null)
+    private function sendRequest($url, $method, $payload = null, $retry = 0)
     {
         $this->checkLoginCredentials();
 
