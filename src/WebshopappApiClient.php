@@ -808,7 +808,7 @@ class WebshopappApiClient
 				print('More than 5 retries, throwing expection...');
 				$this->handleResponseError($responseCode, $responseBody);
 			}
-			
+
 			print('Retry: ' . ($retry+1) . PHP_EOL);
 			return $this->sendRequest($url, $method, $payload, $retry+1);
         }
