@@ -804,8 +804,8 @@ class WebshopappApiClient
 			var_dump($responseBody);
 			print('Error, Trying again in 10 secs...' . PHP_EOL);
 			sleep(10);
-			if ($retry >= 5) {
-				print('More than 5 retries, throwing expection...');
+			if ($retry >= 3) {
+				print('More than 3 retries, throwing expection...');
 				$this->handleResponseError($responseCode, $responseBody);
 			}
 
